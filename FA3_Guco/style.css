@@ -1,0 +1,35 @@
+h1 {
+	font-family: 'Noto Serif';
+	text-align: center;
+	background-color: #96a4ff;
+	border: 2px dotted blue;
+	padding: 10px 15px 10px 15px;
+	width: 250px;
+	margin-bottom: 20px;
+}
+p {
+	text-align: justify;
+	font-style: italic;
+	background-color: hsl(232, 100%, 79%);
+	padding: 20px 20px 20px 20px;
+	border-bottom: 3px double black;
+	border-top: 3px dotted black;
+	border-left: 3px inset black;
+	border-right: 3px outset black;
+	width: 500px;
+}
+span {
+	font-weight: bold;
+	font-style: italic;
+	color: rgb(150, 100, 200);
+	margin-left: 2px;
+	margin-right: 5px;
+}
+body {
+	background-image: url(raidlegends.jpeg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	height: 100%;
+	background-size: cover;
+}
