@@ -1,0 +1,59 @@
+/*Link1*/
+#link1:link {
+	background-color: lemonchiffon;
+	color: powderblue;
+	text-decoration: none;
+	border:1px solid black;
+}
+#link1:visited {
+	color: lightskyblue;
+	border: 2px groove maroon;
+}
+#link1:hover {
+	background-color: lightyellow;
+}
+#link1:active {
+	color: lightsmoke;
+	background-color: white;
+}
+/*Link2*/
+#link2:link {
+	background-color: indigo;
+	color: white;
+	text-decoration: none;
+	border:1px solid black;
+}
+#link2:visited {
+	color: lime;
+	border; 2px ridge lime;
+}
+#link2:hover {
+	background-color: blueviolet
+}
+#link2:active {
+	color: black;
+	background-color: black;
+}
+/*divs*/
+#div1 {
+	margin-top: 5px;
+	text-align: left;
+	width: 100px;
+	height: 100px;
+}
+#div1:target {
+	color: powderblue;
+	background-color: lightyellow;
+	border: 10px groove maroon;
+}
+#div2 {
+	margin-top: 5px;
+	text-align: left;
+	width: 100px;
+	height: 100px;	
+}
+#div2:target {
+	color: lime;
+	background-color: blueviolet;
+	border: 5px ridge lime;
+}
