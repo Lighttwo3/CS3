@@ -1,0 +1,55 @@
+* {
+	box-sizing: border-box;
+}
+p {
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+#pula {
+	position: relative;
+	left: 25%;
+	top: 200px;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 10px;
+	color: red;
+	display: inline-block;
+	padding: 50px;
+}
+#pula:hover {
+	transform: scale(2);
+	background-color: red;
+	color: white;
+}
+#pula:active {
+	background: url(sprite.png) no-repeat -210px -110px;
+	height: 100px;
+	width: 100px;
+	color: transparent;
+}
+#asul {
+	position: relative;
+	left: 40%;
+	top: 200px;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 10px;
+	color: blue;
+	display: inline-block;
+	padding: 50px;
+}
+#asul:hover {
+	transform: scale(2);
+	background-color: blue;
+	color: white;
+}
+#asul:active {
+	background: url(sprite.png) no-repeat -315px -110px;
+	height: 100px;
+	width: 100px;
+	color: transparent;
+}
