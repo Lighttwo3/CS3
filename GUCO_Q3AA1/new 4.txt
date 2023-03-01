@@ -1,0 +1,29 @@
+
+				if (player == 0) {
+					if (random == 0) {
+					} else if (random == 1) {
+					cscore++;
+					document.getElementById("cScore").innerHTML = cscore;
+					}else {
+					pscore++;
+					document.getElementById("pScore").innerHTML = pscore;
+					} 
+				} else if (player == 1) {
+					if (random == 0) {
+					pscore++;
+					document.getElementById("pScore").innerHTML = pscore;
+					} else if (random == 1) {
+					} else {
+					cscore++;
+					document.getElementById("cScore").innerHTML = cscore;
+					} 
+				} else {
+					if (random == 0) {
+					cscore++;
+					document.getElementById("cScore").innerHTML = cscore;
+					} else if (random == 1) {
+					pscore++;
+					document.getElementById("pScore").innerHTML = pscore;
+					} else {
+					} 
+				}
