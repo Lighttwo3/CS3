@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<p>numbers</p>
+		<img src="yo mother.png">
+		<br>
+		<button onclick="theNumbersMason(numbr,texzt)">The numbers, Mason..</button>
+		<p>dis yo numebr: </p><p id="randomnumby"></p>
+		<br>
+		<p>hundiess: </p><p id="hundies"> </p>
+		<p>tensss: </p><p id="tesn"> </p>
+		<p>onez: </p><p id="noes"> </p>
+		
+		<script>
+			var numbr;
+			var texzt;
+			var hundz;
+			var tenz;
+			var onz;
+			
+			function theNumbersMason(numbr,texzt) {
+				numbr = Math.floor(Math.random()*1000);
+				texzt = numbr.toString();
+				document.getElementById("randomnumby").innerHTML = texzt;
+				slice(texzt,hundz,tenz,onz);
+			}
+			
+			function slice(texzt,hundz,tenz,onz) {
+				hundz = texzt[0];
+				tenz = texzt[1];
+				onz = texzt[2];
+				
+				document.getElementById("hundies").innerHTML = hundz;
+				document.getElementById("tesn").innerHTML = tenz;
+				document.getElementById("noes").innerHTML = onz;
+			}
+		</script>
+	</body>
+</html>
