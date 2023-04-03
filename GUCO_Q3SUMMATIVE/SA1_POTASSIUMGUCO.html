@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Coinerzz</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" content="yuh">
+        <style>
+        	body {background: navy; 
+            	text-align: center;
+            	font-family: arial;
+                color: white;
+            }
+			button {padding: 10px; background:violet }
+			span {color: yellow}
+			#coin, h5 {color: yellow; }
+			#coin { background: gray; 
+				width: 25px; 
+				height: 25px;
+				padding: 25px;          
+				border: 5px dashed darkgray;
+				border-radius: 50%;
+				margin: 0 auto;
+                
+			}
+		</style>
+
+	</head>
+	<body onload="guess(userinput)">
+        <h1> headz or tailz? :o </h1>
+        <h2 onclick="guess(userinput)"> Click here to change your Guess: <span id="guess"> </span></h2>
+        <h2 id="coin" onclick="flippin(flip,userinput)"> H </span></h2>   
+        <h5> Click on the coin above to randomly change its face and compare with your guess </h5> 
+        <script>
+			var userinput;
+			var flip = Math.floor(Math.random() * 2);
+            /*dis get inputzx frm uzer and if user input wrong it tell them*/
+            function guess(userinput){
+                userinput = prompt("H for headz T for tailz","");
+                if (userinput=="H" || userinput=="T") { document.getElementById("guess").innerHTML = userinput; } 
+				else { alert("u suck at this '-'"); }
+            }
+			/*dis make random numbr btween 0 and 1 to flip the coin wher 0 is headz and 1 is tailz.*/
+			function flippin(flip,userinput){
+				if (flip == 0){
+					flip = "H";
+					document.getElementById("coin").innerHTML = flip;
+					} else{
+					flip = "T";
+					document.getElementById("coin").innerHTML = flip;
+				}
+			check(flip,userinput);
+			}
+			/*comparez the player's guess to the actual flipp and showz if correct or incorrect.*/
+			function check(flip,userinput) {
+				if ((userinput=="H" && flip==0) || (userinput=="T" && flip==1)) {
+					alert("u got it!!");
+				} else {
+					alert("bettr luck next time :p");
+				}
+				
+			}
+        </script>
+	</body>
+</html>

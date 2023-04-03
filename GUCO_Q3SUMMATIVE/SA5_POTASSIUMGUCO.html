@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Guco borgrs</title>
+		<!-- type in the necessary meta tags -->
+		<style>
+			span {color: blue; text-decoration:underline}
+			button {width: 100px; padding: 5px; background: pink;}
+		</style>
+	</head>
+	<body>
+		<h1> Welcom to Guc oburgrs :D</h1>
+		<h2> Plz pick fod :P</h2>
+		<img src="../GUCO_Q3SUMMATIVE/chezburg.jpeg" style="">
+		<!--- provide your own 3 items and their prices in the list --->
+		<ol>
+			<li> item#1 hemborgr | price: 10 dollaz =) </li>
+			<li> item#2 chezborgr | price: 20 dollaz =P </li>
+			<li> item#3 bugmec 😳 | price: 100 dollaz!!!! >=D </li>
+		</ol>
+		<!-- the following will be used to display purchase information -->
+		<p> Borgr selected : <span id="item"> </span> </p>
+		<p> How many borgrs : <span id="qty"> </span> </p>
+		<p> Amount to pay for borgr: <span id="bill"> </span> </p>
+		<p> How much u pay for all borgrs: <span id="tbill"> </span> </p>
+		<button onclick="play(), getItem(item1,item2,item3,price1,price2,price3,total,tempamount,amount,itemchosen)"> Get borgr! </button>
+		<button onclick="erase()"> No more borgr :( </button>
+		<audio id="audio" src="../GUCO_Q3SUMMATIVE/chezburg.mp3">
+		<script>
+			// variables used in script
+			var item1 = "hemborgr";
+			var item2 = "chezborgr";
+			var item3 = "bugmec";
+			var price1 = 10;
+			var price2 = 20;
+			var price3 = 100;
+			var tempamount;
+			var total = 0;
+			var itemchosen;
+			var amount;
+			
+			function getItem(item1,item2,item3,price1,price2,price3,total,tempamount,amount,itemchosen) {
+				//getting inputs of user
+				itemchosen = prompt("Which borgr???? :D","");
+				amount = prompt("How many borgr???? :o (should be positive integer plzplz)","");
+				if(amount>0) {
+					if(itemchosen==1) {
+						document.getElementById("item").innerHTML = item1;
+						document.getElementById("bill").innerHTML = price1;
+						tempamount = price1*amount;
+						total = total + tempamount;
+					} else if(itemchosen==2) {
+						document.getElementById("item").innerHTML = item2;
+						document.getElementById("bill").innerHTML = price2;
+						tempamount = price2*amount;
+						total = total + tempamount;
+					} else if(itemchosen==3) {
+						document.getElementById("item").innerHTML = item3;
+						document.getElementById("bill").innerHTML = price3;
+						tempamount = price3*amount;
+						total = total + tempamount;
+					} else {
+						document.getElementById("item").innerHTML = "no item chosen :P";
+					}
+					document.getElementById("qty").innerHTML = amount;
+					document.getElementById("tbill").innerHTML = total;
+					alert("mm okay good :P");
+				} else {
+					alert("u suck at this '-'");
+				}
+			}
+			
+			function erase() {
+				document.getElementById("item").innerHTML = " ";
+				document.getElementById("qty").innerHTML = " ";
+				document.getElementById("bill").innerHTML = " ";
+				document.getElementById("tbill").innerHTML = " ";
+			}
+			
+			// extra stuff
+			function play() {
+				var audio = document.getElementById("audio");
+				audio.play();
+			}
+		</script>
+</body>
+</html>

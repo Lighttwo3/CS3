@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>One Time Password</title>
+		<style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            a {font-size: 0.5em; color: maroon}
+        </style>
+	</head>
+	<body onload = "display()">
+		<h1> Final Verification Step </h1>
+		<h2> Current OTP: <span id="otp"> _ _ _ _ _ _ </span> <a href="" onclick = "generate()"> New 
+	OTP </a></h2>
+		<button onclick = "check()"> Enter the OTP as shown above </button>
+		<script>
+			//creates a 6 digit password through a for loop.
+			function generate(){
+				let digits = "0123456789";
+				let random = "";
+				for (let i = 0; i < 6; i++){
+					random += digits[Math.floor(Math.random() * 10)];
+				}
+				document.getElementById("otp").innerHTML = random;
+			}
+			//displays OTP
+			function show(){
+				generate();
+			}
+			//verifies OTP and redirects user.
+			function check(){
+				let x = prompt("Please enter your password:");
+				let y = document.getElementById("otp").innerHTML;
+				if (x === y){
+					window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+				} 
+				else{
+					alert("wrong :P");
+					generate();
+				}
+			}
+		</script>
+	</body>
+</html>
