@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>trinasgle</title>
+	</head>
+	<body>
+		<h1>Triangle Test</h1>
+		<p>please press this button.</p>
+		<button onclick="getprompt(a,b,c)">tringl</button>
+		
+		<script>
+			var a;
+			var b;
+			var c;
+			
+			function getprompt(a,b,c) {
+				a = prompt("gib side 1","");
+				b = prompt("gib side 2","");
+				c = prompt("gib side 3","");
+				determinetriangle(a,b,c);
+			}
+			
+			function determinetriangle(a,b,c) {
+				if (a==b && b==c) {
+					alert("Triangle be equilateral B)");
+				} else if (a==b || b==c || a==c) {
+					alert("Triangle be isosceles :P");
+				} else {
+					alert("Triangle be scalene :(");
+				}
+			}
+		</script>
+	</body>
+</html>
