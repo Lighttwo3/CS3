@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Im semi I say automatic</title>
+		<style>
+			span {
+				display: inline-block;
+				length: 20px;
+				width: 20px;
+				border: 1px solid black;
+				padding: 1px;
+				margin: 3px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="number" id="inx"></input>
+		<input type="number" id="iny"></input>
+		<p>Money add then multiply</p>
+		<button onclick="takeinput(x,y),audiomatic()">Click for math</button>
+		<br>
+		<br>
+		<div id="table" style="border: 1px solid black; padding: 1px; display: inline-block;"></div>
+		<audio id="audio" src="../FA12_GUCO/Automatic.mp3"></audio>
+		<script>
+			var x, y, ix, iy, content;
+			function takeinput(x,y) {
+				var x = document.getElementById("inx").value;
+				var y = document.getElementById("iny").value;
+				console.log(x,y);
+				filter(x,y);
+			}
+			function filter(x,y) {
+				if ((2<=x && x<=10) && (2<=y && y<=10)) {
+					maketable(ix,iy,x,y,content);
+				} else {
+					alert("u suk!!!!");
+				}
+			}
+			function maketable(ix,iy,x,y,content) {
+				content = "";
+				ix = 0;
+				iy = 0;
+				while(ix<x) {
+					iy = 1;
+					ix++;
+					content = content + "<span>" + (ix*iy).toString() + "</span>";
+					document.getElementById("table").innerHTML = content;
+					while(iy<y) {
+						iy++;
+						content = content + "<span>" + (iy*ix).toString() + "</span>";
+						document.getElementById("table").innerHTML = content;
+					}
+					content = content + "<br>";
+				}
+			}
+			function audiomatic() {
+				audio.play();
+			}
+		</script>
+	</body>
+</html>
